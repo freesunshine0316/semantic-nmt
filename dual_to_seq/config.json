@@ -1,0 +1,55 @@
+{
+    "train_path": "data/nc-v11.tok_le50.json",
+    "test_path": "data/newstest2013.tok.json",
+    "word_vec_src_path": "data/vectors.en.st",
+    "word_vec_tgt_path": "data/vectors.de.st",
+    "suffix": "dev13_nocov_bch50_v2",
+    "model_dir": "logs",
+    "isLower": false,
+
+    "pointer_gen": false,
+    "use_coverage": false,
+    "attention_vec_size": 150,
+    "batch_size": 50,
+    "beam_size": 10,
+
+    "num_syntax_match_layer": 9,
+    "max_node_num": 80,
+    "max_in_neigh_num": 2,
+    "max_out_neigh_num": 20,
+    "min_answer_len": 0,
+    "max_answer_len": 100,
+    "learning_rate": 0.001,
+    "lambda_l2": 0.001,
+    "dropout_rate": 0.1,
+    "cov_loss_wt": 0.1,
+    "max_epochs": 50,
+    "optimize_type": "adam",
+
+    "with_highway": true,
+    "highway_layer_num": 1,
+
+    "with_char": false,
+    "char_dim": 50,
+    "char_lstm_dim": 50,
+    "max_char_per_word": 20,
+    
+    "attention_type": "hidden_embed",
+    "way_init_decoder": "src",
+    "node_dim": 300,
+    "edgelabel_dim": 50,
+    "neighbor_vector_dim": 500,
+    "fix_word_vec": false,
+    "compress_input": true,
+    "compress_input_dim": 300,
+    "context_layer_num": 1,
+    "context_lstm_dim": 500,
+    "direction": "bidir",
+
+    "gen_hidden_size": 500,
+    "num_softmax_samples": 100,
+    "mode": "ce_train",
+
+    "config_path": "config.json",
+    "generate_config": false
+}
