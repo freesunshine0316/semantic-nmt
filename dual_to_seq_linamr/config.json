@@ -1,0 +1,44 @@
+{
+    "train_path": "data/all.tok_le50.json",
+    "test_path": "data/newstest2013.tok.json",
+    "word_vec_src_path": "data/vectors.en.st",
+    "word_vec_tgt_path": "data/vectors.de.st",
+    "suffix": "base",
+    "model_dir": "logs",
+
+    "use_coverage": false,
+    "cov_loss_wt": 0.1,
+    "attention_vec_size": 800,
+    "batch_size": 100,
+    "beam_size": 32,
+    "max_gradient_norm": 5.0,
+
+    "max_linamr_len": 50,
+    "max_src_len": 50,
+    "min_answer_len": 0,
+    "max_answer_len": 50,
+    "learning_rate": 0.0005,
+    "lambda_l2": 1e-8,
+    "dropout_rate": 0.2,
+    "max_epochs": 50,
+    "optimize_type": "adam",
+
+    "with_highway": false,
+    "highway_layer_num": 1,
+
+    "way_init_decoder": "src",
+    "neighbor_vector_dim": 400,
+    "fix_word_vec": false,
+    "compress_input": false,
+    "compress_input_dim": 300,
+    "context_layer_num": 1,
+    "context_lstm_dim": 800,
+    "direction": "bidir",
+
+    "gen_hidden_size": 800,
+    "num_softmax_samples": 100,
+    "mode": "ce_train",
+
+    "config_path": "config.json",
+    "generate_config": false
+}
